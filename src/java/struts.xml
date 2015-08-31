@@ -1,0 +1,66 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default">
+         <action name="add" class="org.hibernate.view.AdpostAction" method="Add">
+             <interceptor-ref name="fileUpload">
+                <param name="maximumSize">1048576</param>
+                <param name="allowedTypes">
+                image/jpg,image/jpeg,image/png    
+                </param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="success">products.jsp</result>
+            <result name="input">Adpost.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+        <action name="register" class="org.hibernate.view.RegisterAction" method="register">
+             <interceptor-ref name="fileUpload">
+                <param name="maximumSize">1048576</param>
+                <param name="allowedTypes">
+                image/jpg,image/jpeg,image/png    
+                </param>
+            </interceptor-ref>
+            <interceptor-ref name="defaultStack"></interceptor-ref>
+            <result name="success">indexo.jsp</result>
+            <result name="input">error.jsp</result>
+            <result name="error">weu.jsp</result>
+        </action>
+        
+        
+        <action name="forgotpassword" class="org.hibernate.view.ForgotpasswordAction" method="sendMail">
+             
+            <result name="success">emailsent.jsp</result>
+            <result name="input">error.jsp</result>
+            <result name="error">weu1.jsp</result>
+        </action>
+        
+        <action name="notifysellerbidder" class="org.hibernate.view.NotifySBAction" method="sendMail">
+             
+            <result name="success">emailsent.jsp</result>
+            <result name="input">error.jsp</result>
+            <result name="error">weu1.jsp</result>
+        </action>
+        
+        <action name="log">
+            <result>Login.jsp</result>
+        </action>
+        
+        <action name="login">
+            <result>LoginProceed.jsp</result>
+        </action>
+        
+        
+        <action name="logout">
+            <result>Logout.jsp</result>
+        </action>
+        
+        
+        <action name="bid" class="org.hibernate.view.BidAction">
+            <result name="success">success.jsp</result>
+            <result name="error">error.jsp</result>
+        </action>
+    </package>
+</struts>
