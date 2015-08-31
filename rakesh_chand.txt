@@ -1,8 +1,0 @@
-Hi this file belongs to rakesh chand.....
-I love my gf..
-
-<<<<<<< Updated upstream
-Her name is katrina kaif
-=======
-HER NAME IS DEEPIKA PADUKONE
->>>>>>> Stashed changes
