@@ -1,1 +1,0 @@
-i'm a hard core technocrats...oops kidding
